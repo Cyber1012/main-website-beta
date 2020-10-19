@@ -7,7 +7,7 @@ if (localStorage.getItem("acceptedCookies") === "yes") {
 
     Swal.fire({
 
-      title: "<strong>In Beta!</strong>",
+      title: "<span class=\"bold\">In Beta!</span>",
       icon: "info",
       html: "Only the home page is properly styled, the rest is in heavy development.",
 
@@ -29,8 +29,8 @@ if (localStorage.getItem("acceptedCookies") === "yes") {
 
     html: "This site uses cookies and Google Analytics to improve your experience, if you continue you are agreeing to these terms.",
     showDenyButton: true,
-    confirmButtonText: "I Agree",
-    denyButtonText: "Decline",
+    confirmButtonText: "<span class=\"beta-popup-agree-button\">I Agree</span>",
+    denyButtonText: "<span class=\"beta-popup-decline-button\">Decline</span>",
     confirmButtonColor: "#5cb85c",
     denyButtonColor: "#d9534f"
 
@@ -40,7 +40,7 @@ if (localStorage.getItem("acceptedCookies") === "yes") {
 
       Swal.fire({
 
-        title: "<strong>In Beta!</strong>",
+        title: "<span class=\"bold\">In Beta!</span>",
         icon: "info",
         html: "Only the home page is properly styled, the rest is in heavy development.",
 
@@ -109,3 +109,5 @@ $(".theme-switch").click(function () {
   localStorage.setItem("mode", mode);
   applyMode(mode);
 });
+
+localStorage.clear();
